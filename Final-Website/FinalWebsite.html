@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        
+        <link rel="stylesheet" type="text/css" href="CSS/FinalWebsite.css">
+        <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+        <script type="text/javascript" src="loading-bar.js"></script>
+    </head> 
+    <body>
+        <div class='parent'>
+
+            Hello Iann, we will be your helpful assistant. By pressing enter you authorize us to search for the information necessary to help you.
+            <button class="buttons" onclick="window.location.href='FinalWebsite2.html'" style="vertical-align:middle"><span> Allow Access to Information</span></button>
+           
+
+        </div>
+
+       
+    </body>
+
+    <script>  
+
+    var input = document.body;
+    input.addEventListener("keyup", function(event) {
+     if (event.keyCode === 13) {
+      event.preventDefault();
+     document.getElementsByClassName("buttons")[0].click();
+     }
+    });
+
+    </script>
+</html> 

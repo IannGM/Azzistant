@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        
+        <link rel="stylesheet" type="text/css" href="CSS/FinalWebsite.css">
+        <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+        <script type="text/javascript" src="loading-bar.js"></script>
+    </head> 
+    <body>
+        <div class='parent'>
+            <h1> 
+                Loading your information…
+                <p></p>
+                <button class="buttons" onclick="window.location.href='FinalWebsite3.html'" style="vertical-align:middle"><span>Enter </span></button>
+        </h1>
+        </div>
+
+       
+        <div class="ldBar"
+    
+        style="width:100%;height:100px",
+        data-value="100"
+        data-duration="10"
+        data-transition-in="100%"
+        data-stroke="data:ldbar/res,gradient(0,1,#9df,#9fd,#df9,#fd9)",
+        data-path="M10 20Q20 15 30 20Q40 25 50 20Q60 15 70 20Q80 25 90 20",
+       
+      ></div>
+        
+
+       
+    </body>
+
+    <script>  
+  
+  var input = document.body;
+    input.addEventListener("keyup", function(event) {
+     if (event.keyCode === 13) {
+      event.preventDefault();
+     document.getElementsByClassName("buttons")[0].click();
+     }
+    });
+    </script>
+</html> 
