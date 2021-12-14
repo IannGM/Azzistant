@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="CSS/loading-bar.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/evo-calendar.css"/>
         <link rel="stylesheet" type="text/css" href="CSS/evo-calendar.midnight-blue.css"/>
+        <link rel="stylesheet" type="text/css" href="CSS/evo-calendar.orange-coral.css"/>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
         
         <script src="evo-calendar.js"></script>
@@ -22,6 +23,7 @@
            <script>
            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
            </script>
+    
         </div>
 
         <div class="tab">
@@ -59,7 +61,7 @@
 
         </div>
        
-        <div class="card" id="lendar" >
+        <div class="card" id="lendar">
             <h1>Schedule</h1>  
             
             
@@ -67,7 +69,19 @@
     </div>
     <div class="card" id="references">
         <h1>References</h1>  
+        <div id="links">
+
+          <p><a href="https://www.equinox.com/clubs/new-york/downtown/soho" target="_blank" ></a></p>
+            <p> </p>
+            https://www.mountsinai.org/locations/union-square
+            <p></p>
+            https://www.amctheatres.com/showtimes/all/2021-12-14/amc-village-7/all
+            <p></p>
+            https://www.wholefoodsmarket.com/online-ordering
+
+
         </div>
+    </div>
     
 
 
@@ -82,11 +96,13 @@
 
 $(document).ready(function() {
     $('#calendar').evoCalendar({
-        'theme':'Midnight Blue',
+        'theme':'Orange Coral',
             todayHighlight: true,
             sidebarToggler: true,
             eventListToggler: true,
             canAddEvent: true,
+            eventDisplayDefault: true,
+            
             'calendarEvents': [
             {
             name: 'Gym Day!!!',
@@ -114,7 +130,7 @@ $(document).ready(function() {
             name: 'Doctors Appoinment',
 
             id: '4hducye', // Event's id (required, for removing event)
-            description: '12 W 29th St, New York, NY 10001 @ 2:00pm', // Description of event (optional)
+            description: '10 Union Square East, New York, NY 10003 @ 2:00pm', // Description of event (optional)
             
             date: 'December/15/2021', // Date of event
             type: 'event', // Type of event (event|holiday|birthday)
