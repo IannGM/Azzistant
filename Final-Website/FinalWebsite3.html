@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head> 
-        
+       
+
         <link rel="stylesheet" type="text/css" href="CSS/FinalWebsite.css">
-        <link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+        <link rel="stylesheet" type="text/css" href="CSS/loading-bar.css"/>
+        <link rel="stylesheet" type="text/css" href="CSS/evo-calendar.css"/>
+        <link rel="stylesheet" type="text/css" href="CSS/evo-calendar.midnight-blue.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        
+        <script src="evo-calendar.js"></script>
+
         <script type="text/javascript" src="loading-bar.js"></script>
+
     </head> 
     <body>
    
@@ -21,11 +29,16 @@
 
         </div>
 
-        <div class="cards">
+     <div class="cards">
         <div class="card"  id="text-shadow">
-            <h1>General</h1>
+            <h1 id="highlight2">General</h1>
             <p>You haven’t been to the grocery store in the last week. <p></p> I ordered delivery for the same things you bought last time.</p>
         </div>
+            <div class="card"  id="text-shadow">
+                <h1>Self</h1>
+                <p>I see that you haven’t been to the gym in 4 months, it is recommended that you exercise regularly so I have signed up for a membership to the gym closest to you and added it to your schedule. You’ll start by going twice a week.
+                </p>
+            </div>
         <div class="card" id="black">
             <h1 id="highlight">Relationships</h1>
             <p>We can see that you haven’t talked to your mom in 2 weeks. <p></p>We have sent a message saying “Hello, haven’t talked in a while. Let me know when you have some time available to have a call.” We will add the time of the phone call to the schedule when the message is answered.</p>
@@ -38,15 +51,103 @@
             Doctor appointment
 
         </div>
+
+        <div class="card">
+            
+            <h1 id=highlight3>Entertainment</h1>
+            We bought two tickets for the new Spiderman movie and invited your friend Mario who loves the MCU.
+
+        </div>
+       
+        <div class="card" id="lendar" >
+            <h1>Schedule</h1>  
+            
+            
+            <div id="calendar"></div>
     </div>
+    <div class="card" id="references">
+        <h1>References</h1>  
+        </div>
     
-  
-        
+
 
        
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        
+    <script src="evo-calendar.js"></script>
 
-    <script>  
+    <script>
 
-    </script>
+
+$(document).ready(function() {
+    $('#calendar').evoCalendar({
+        'theme':'Midnight Blue',
+            todayHighlight: true,
+            sidebarToggler: true,
+            eventListToggler: true,
+            canAddEvent: true,
+            'calendarEvents': [
+            {
+            name: 'Gym Day!!!',
+
+            id: '4hducye', // Event's id (required, for removing event)
+            description: 'First gym day woo!!! Leave apartment at 10:00am', // Description of event (optional)
+            
+            date: 'December/15/2021', // Date of event
+            type: 'event', // Type of event (event|holiday|birthday)
+            color: '#63d867', // Event custom color (optional)
+            everyYear: true // Event is every year (optional)
+        },
+        {
+            name: 'Groceries',
+
+            id: '4hducye', // Event's id (required, for removing event)
+            description: 'They arrive at 12:10', // Description of event (optional)
+            
+            date: 'December/15/2021', // Date of event
+            type: 'event', // Type of event (event|holiday|birthday)
+            color: 'lightcoral', // Event custom color (optional)
+            everyYear: true // Event is every year (optional)
+        },
+        {
+            name: 'Doctors Appoinment',
+
+            id: '4hducye', // Event's id (required, for removing event)
+            description: '12 W 29th St, New York, NY 10001 @ 2:00pm', // Description of event (optional)
+            
+            date: 'December/15/2021', // Date of event
+            type: 'event', // Type of event (event|holiday|birthday)
+            color: '#63d867', // Event custom color (optional)
+            everyYear: true // Event is every year (optional)
+        },
+        {
+            name: 'Spiderman Movie',
+
+            id: '4hducye', // Event's id (required, for removing event)
+            description: 'Meet Mario in Union Square at 4:00pm', // Description of event (optional)
+            
+            date: 'December/17/2021', // Date of event
+            type: 'event', // Type of event (event|holiday|birthday)
+            color: 'lightseagreen', // Event custom color (optional)
+            everyYear: true // Event is every year (optional)
+        }
+
+
+    ],
+    
+
+            onSelectDate: function() {
+                // console.log('onSelectDate!')
+            },
+            onAddEvent: function() {
+                console.log('onAddEvent!')
+            }
+        })
+    });
+
+   
+
+      </script>
+          
 </html> 
